@@ -15,7 +15,8 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.7.0",
     "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "json-server": "^0.17.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
