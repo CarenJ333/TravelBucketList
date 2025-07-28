@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "debug": "echo 'Node version:' && node -v && echo 'npm version:' && npm -v && echo 'Installed packages:' && npm ls --depth=0 && ls -la node_modules/.bin",
-    "start": "node_modules/.bin/json-server --watch db.json --port $PORT"
+    "start": "json-server --watch db.json --host 0.0.0.0 --port $PORT"
+    
   },
   "dependencies": {
     "json-server": "^0.17.4",
