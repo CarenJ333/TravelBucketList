@@ -7,7 +7,7 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* not center so content scrolls down */
+  align-items: flex-start; 
   min-height: 100vh;
 }
 
