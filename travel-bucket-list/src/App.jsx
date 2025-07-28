@@ -15,7 +15,7 @@ function App() {
 
   // Fetch data when the component mounts
   useEffect(() => {
-    fetch("http://localhost:4000/destinations")
+    fetch("https://travelbucketlist-1.onrender.com/destinations")
       .then((res) => res.json())
       .then((data) => setDestinations(data))
       .catch((error) => console.error("Fetch error:", error));
@@ -23,7 +23,7 @@ function App() {
 
   function handleAddDestination(newDestination) {
   console.log(" Sending:", newDestination);
-  fetch("http://localhost:4000/destinations", {
+  fetch("https://travelbucketlist-1.onrender.com/destinations", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function App() {
 function handleToggleStatus(id, currentStatus) {
   const updatedStatus = currentStatus === "Visited" ? "Not Yet" : "Visited";
 
-  fetch(`http://localhost:4000/destinations/${id}`, {
+  fetch(`https://travelbucketlist-1.onrender.com/destinations/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"

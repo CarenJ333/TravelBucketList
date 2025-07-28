@@ -13,7 +13,7 @@ function GoalSetting() {
 
   // Load goals on mount
   useEffect(() => {
-    fetch("http://localhost:4000/goals")
+    fetch("https://travelbucketlist-1.onrender.com/goals")
       .then((res) => res.json())
       .then((data) => {
         setGoals(data);
@@ -30,7 +30,7 @@ function GoalSetting() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:4000/goals", {
+    fetch("https://travelbucketlist-1.onrender.com/goals", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
