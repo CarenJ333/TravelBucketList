@@ -15,7 +15,10 @@ function App() {
 
   // Fetch data when the component mounts
   useEffect(() => {
-    fetch("https://travelbucketlist-1.onrender.com/destinations")
+    fetch("https://travelbucketlist-1.onrender.com/destinations", {
+        headers: { "Content-Type": "application/json" },
+        mode: "cors"
+    })
       .then((res) => res.json())
       .then((data) => setDestinations(data))
       .catch((error) => console.error("Fetch error:", error));
@@ -28,6 +31,7 @@ function App() {
     headers: {
       "Content-Type": "application/json",
     },
+    method: "cors",
     body: JSON.stringify(newDestination),
   })
     .then((res) => res.json())
@@ -45,6 +49,7 @@ function handleToggleStatus(id, currentStatus) {
     headers: {
       "Content-Type": "application/json"
     },
+    method: "cors",
     body: JSON.stringify({ status: updatedStatus })
   })
     .then(res => res.json())

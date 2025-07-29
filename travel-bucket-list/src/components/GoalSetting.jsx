@@ -13,7 +13,10 @@ function GoalSetting() {
 
   // Load goals on mount
   useEffect(() => {
-    fetch("https://travelbucketlist-1.onrender.com/goals")
+    fetch("https://travelbucketlist-1.onrender.com/goals", {
+        headers: { "Content-Type": "application/json" },
+        mode: "cors"
+    })
       .then((res) => res.json())
       .then((data) => {
         setGoals(data);
@@ -33,6 +36,7 @@ function GoalSetting() {
     fetch("https://travelbucketlist-1.onrender.com/goals", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
+      mode: "cors",
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
